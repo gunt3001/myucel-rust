@@ -53,6 +53,9 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+    # Write permission required for creating a release
+    permissions:
+      contents: write
     steps:
       - name: Download all artifacts
         uses: actions/download-artifact@v3
@@ -63,6 +66,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: dist/*
+          files: |
+            dist/linux-x64/*
+            dist/windows-x64/*
+            dist/macos-aarch64/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
