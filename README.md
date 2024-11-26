@@ -40,6 +40,20 @@ myucel "Outbreak Company"
 myucel Dandadan
 ```
 
+### Output
+
+```
+Searching Reddit /r/anime for Dandadan discussion threads...
+Dandadan - Episode 8 discussion: https://www.reddit.com/r/anime/comments/1gwio6p/dandadan_episode_8_discussion/
+Dandadan - Episode 7 discussion: https://www.reddit.com/r/anime/comments/1gr8662/dandadan_episode_7_discussion/
+Dandadan - Episode 6 discussion: https://www.reddit.com/r/anime/comments/1gltuuu/dandadan_episode_6_discussion/
+Dandadan - Episode 5 discussion: https://www.reddit.com/r/anime/comments/1ggi485/dandadan_episode_5_discussion/
+Dandadan - Episode 4 discussion: https://www.reddit.com/r/anime/comments/1gb66al/dandadan_episode_4_discussion/
+Dandadan - Episode 3 discussion: https://www.reddit.com/r/anime/comments/1g5ucaq/dandadan_episode_3_discussion/
+Dandadan - Episode 2 discussion: https://www.reddit.com/r/anime/comments/1g0m8i3/dandadan_episode_2_discussion/
+Dandadan - Episode 1 discussion: https://www.reddit.com/r/anime/comments/1fvbbz3/dandadan_episode_1_discussion/
+```
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
