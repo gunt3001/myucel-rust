@@ -1,4 +1,4 @@
-# Myucel
+# Myucel (Rust edition)
 
 A simple CLI tool to search Reddit's /r/anime episode discussion threads, written in Rust.
 
@@ -53,6 +53,14 @@ Dandadan - Episode 3 discussion: https://www.reddit.com/r/anime/comments/1g5ucaq
 Dandadan - Episode 2 discussion: https://www.reddit.com/r/anime/comments/1g0m8i3/dandadan_episode_2_discussion/
 Dandadan - Episode 1 discussion: https://www.reddit.com/r/anime/comments/1fvbbz3/dandadan_episode_1_discussion/
 ```
+
+## History & motivations
+
+This is my personal go-to simple project when learning new programming languages.
+
+It started off as a simple Python script back in 2013 (hence the project name), the source code of which is lost to time.
+
+You can also find .NET/C# version here: https://github.com/gunt3001/Myucel.NET
 
 ## License
 
