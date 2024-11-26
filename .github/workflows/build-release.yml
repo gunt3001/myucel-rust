@@ -12,11 +12,16 @@ env:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.platform.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        platform: [linux-x64, windows-x64, macos-aarch64]
+        platform:
+          - os: ubuntu-latest
+            arch: linux-x64
+          - os: windows-latest
+            arch: windows-x64
+          - os: macos-latest
+            arch: macos-aarch64
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -32,17 +37,17 @@ jobs:
         run: |
           cargo build --release --verbose
           mkdir -p dist
-          if [[ "${{ matrix.platform }}" == "windows-x64" ]]; then
-            mv target/release/*.exe dist/myucel-${{ matrix.platform }}.exe
+          if [[ "${{ matrix.platform.os }}" == "windows-x64" ]]; then
+            mv target/release/*.exe dist/myucel-${{ matrix.platform.arch }}.exe
           else
-            mv target/release/myucel dist/myucel-${{ matrix.platform }}
+            mv target/release/myucel dist/myucel-${{ matrix.platform.arch }}
           fi
         shell: bash
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.platform }}
+          name: ${{ matrix.platform.arch }}
           path: dist/
 
   release:
