@@ -22,15 +22,13 @@ async fn main() {
     // Search Reddit
     match Myucel::search_reddit(&args.name).await {
         Ok(posts) => {
-            spinner.stop();
-            println!();
+            spinner.stop_with_newline();
             for post in posts {
                 println!("{}: {}", post.title, post.url);
             }
         }
         Err(e) => {
-            spinner.stop();
-            println!();
+            spinner.stop_with_newline();
             eprintln!("Error searching Reddit: {}", e);
         }
     }
